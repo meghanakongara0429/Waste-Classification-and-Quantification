@@ -15,7 +15,6 @@ To run this project locally, follow these steps:
 1. Clone the Repository
    ```bash
    git clone https://github.com/your-username/TrashTracker.git
-Navigate to the Project Directory
 2. Navigate to the Project Directory
 ```bash
 cd TrashTracker
