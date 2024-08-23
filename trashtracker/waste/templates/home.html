@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}TrashTracker Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="jumbotron text-center text-white" style="background-image: url('{% static 'images/home.jpg' %}'); background-size: cover; background-position: center;">
+    <div class="container">
+        <h1 class="display-4">Welcome to TrashTracker</h1>
+        <p class="lead">Efficient Waste Classification and Quantification Using AI</p>
+        <a href="{% url 'upload' %}" class="btn btn-light btn-lg mt-4">Get Started</a>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card border-0 shadow">
+                <div class="card-body text-center">
+                    <i class="fas fa-recycle fa-3x text-success mb-3"></i>
+                    <h5 class="card-title">Waste Classification</h5>
+                    <p class="card-text">Identify different types of waste with high accuracy using our advanced AI model.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow">
+                <div class="card-body text-center">
+                    <i class="fas fa-chart-bar fa-3x text-info mb-3"></i>
+                    <h5 class="card-title">Quantification</h5>
+                    <p class="card-text">Analyze the percentage composition of different waste materials in your images.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow">
+                <div class="card-body text-center">
+                    <i class="fas fa-globe fa-3x text-warning mb-3"></i>
+                    <h5 class="card-title">Environmental Impact</h5>
+                    <p class="card-text">Contribute to a cleaner environment by making informed waste management decisions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action -->
+<div class="bg-light py-5">
+    <div class="container text-center">
+        <h2>Start Your Waste Management Journey Today!</h2>
+        <p class="lead">Upload your waste images and get instant results.</p>
+        <a href="{% url 'upload' %}" class="btn btn-primary btn-lg">Upload Now</a>
+    </div>
+</div>
+
+{% endblock %}
