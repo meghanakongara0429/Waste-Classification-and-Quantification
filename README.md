@@ -16,6 +16,20 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/TrashTracker.git
 Navigate to the Project Directory
-2.Navigate to the Project Directory
+2. Navigate to the Project Directory
 ```bash
 cd TrashTracker
+3. Install Dependencies
+Create a virtual environment and install the required Python packages:
+```bash
+python -m venv venv
+source venv/bin/activate   # On Windows, use `venv\Scripts\activate`
+pip install -r requirements.txt
+4. Set Up the Database
+Run migrations to set up the database:
+```bash
+python manage.py migrate
+5. Run the Development Server
+Start the Django development server:
+```bash
+python manage.py runserver
