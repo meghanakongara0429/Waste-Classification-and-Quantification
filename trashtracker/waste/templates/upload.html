@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Upload Waste Image{% endblock %}
+
+{% block content %}
+<!-- Full-Width Hero Section -->
+<section class="hero text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-3">Upload Your Waste Image</h1>
+        <p class="lead">Classify and quantify waste efficiently with our advanced tool.</p>
+    </div>
+</section>
+
+<!-- Form Section -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <!-- Card with Form -->
+            <div class="card border-0 shadow-lg bg-dark-green text-light">
+                <div class="card-body p-5">
+                    <h3 class="card-title text-center mb-4">Select and Upload Image</h3>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="wasteImage" class="form-label">Choose File</label>
+                            <input type="file" class="form-control-file" id="wasteImage" name="wasteImage" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success btn-lg">Upload Image</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Full Page Background Styling */
+body {
+    background: url('{% static "images/uploadbackground.jpg" %}') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better text contrast */
+    color: white;
+    padding: 4rem 0; /* Adjust padding as needed */
+}
+
+.card {
+    border-radius: 1rem;
+    background-color: #004d00; /* Dark green background for the card */
+    color: #e0f7fa; /* Light text color for contrast */
+    padding: 2rem; /* Adjust padding as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better visibility */
+}
+
+.card-body {
+    padding: 2rem; /* Adjust padding as needed */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: #e0f7fa; /* Light color for card title */
+}
+
+.form-group label {
+    font-weight: bold; /* Make the label bold */
+    color: #e0f7fa; /* Light color for form labels */
+}
+
+.form-control-file {
+    background-color: #ffffff; /* White background for file input */
+    border: 1px solid #cccccc; /* Light border for the file input */
+    border-radius: 0.25rem; /* Rounded corners for file input */
+    padding: 0.5rem; /* Padding for better spacing */
+}
+
+.btn-success {
+    background-color: #2e7d32; /* Dark green button color */
+    border-color: #2e7d32; /* Matching border color */
+}
+</style>
+
+{% endblock %}
