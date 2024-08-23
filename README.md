@@ -1,6 +1,4 @@
-Here's a neatly formatted version of your README content:
 
----
 
 TrashTracker: Waste Classification and Quantification
 
